@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="5" time="1.038" timestamp="2021-08-24T18:20:53.696407" hostname="DESKTOP-R3PTHH9"><testcase classname="test_interface.test_login.TestLgoinInterface" name="test_user_name_none" time="0.037" /><testcase classname="test_interface.test_login.TestLgoinInterface" name="test_user_name_empty" time="0.016" /><testcase classname="test_interface.test_login.TestLgoinInterface" name="test_user_password_none" time="0.016" /><testcase classname="test_interface.test_login.TestLgoinInterface" name="test_user_password_empty" time="0.016" /><testcase classname="test_interface.test_login.TestLgoinInterface" name="test_user_name_and_password_is_right" time="0.750"><failure message="assert 200 == 100&#10;  +200&#10;  -100">self = &lt;test_interface.test_login.TestLgoinInterface object at 0x00000119C4A1FC70&gt;
+
+    def test_user_name_and_password_is_right(self):
+        """用户名和密码正确"""
+        payload = dict(UserType=1,UserName="02899999",PassWord="123123",pwd='',UserCode='dfdsg2165498jdofdfd')
+        r = requests.post(self.base_url,data=payload)
+&gt;       assert r.status_code == 100
+E       assert 200 == 100
+E         +200
+E         -100
+
+test_interface\test_login.py:49: AssertionError</failure></testcase></testsuite></testsuites>
